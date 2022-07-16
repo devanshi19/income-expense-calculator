@@ -1,0 +1,347 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'lato';
+    background-color: #d8bfd8 !important;
+    font-size: 16px;
+    color: #36454F;
+    line-height: 30px;
+    font-weight: 400;
+    background-size:cover;
+    z-index: -1;
+    
+}
+h1,h2,h3,h4,h5,h6{
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+.container{
+    margin: 0px auto;
+    max-width:1200px;
+    /* background-color: #84778b; */
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/*   header section */
+.main-header{
+    background-color: #282c35;
+}
+.logo{
+    width: 25%;
+    float: left;
+    padding: 20px 0px;
+ }
+.logo h1{
+   padding-top: 10px;    
+   color:		#B0B0B0 ;
+}
+ .nav{
+   width: 75%;
+   float:left;
+   padding-left: 541px !important;
+
+ }
+ .nav ul{
+    list-style: none;
+    float: right;
+    padding: 42px 0px;
+ }
+ .nav ul li{
+    float:left;
+    padding: 0px 0px 0px 18px;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+}
+.nav ul li i{
+    font-size: 21px;
+}
+
+/* banner css */
+.banner{
+    text-align: center;
+    padding: 12px 0px;
+    background-color: #84778b;
+}
+.banner h2{
+    color: #282c35;
+}
+
+
+/* main section css*/
+
+.income{
+   margin-top: 120px;
+    width: 50%;
+    float: left;
+    
+}
+.income h3{
+    padding: 0px 10px;
+    color: #36454F;
+    text-transform: capitalize;
+}
+/* balance css*/
+.balance{
+    width: 50%;
+    float: left;
+    text-align: left;
+   
+    margin: 120px 0px;
+    padding: 0px 121px;
+    /* visibility: hidden; */
+}
+.balance label{
+    padding: 8px 5px;
+    color : #36454F;
+   font-weight: bold;
+}
+.balance h3{
+    color: #36454F;
+    text-transform: capitalize;
+}
+
+/* expense css */
+.expense{
+    margin: 120px 0px;
+    clear: both;
+    width: 50%;
+    display: inline;
+}
+
+.expense_input {
+    width: 30%;
+    float: left;
+}
+.expense_input h4{
+    padding: 0px 10px;
+    text-transform: capitalize;
+}
+.note_input{
+    width: 30%;
+    float: left;
+}
+.note_input h4{
+    padding: 0px 10px;
+}
+.categories{
+    clear: both;
+    width: 30%;
+    float: left;
+    padding: 0px 10px;
+}
+.months{
+    width: 30%;
+    float: left;
+    padding: 0px 10px;
+}
+.expense_addbtn{
+    clear: both;
+    width: 30%;
+    padding: 10px 10px;
+    float: left;
+}
+.edit_value{
+    clear: both;
+   padding: 0px 10px;
+   
+}
+
+/* input css*/
+.inputs{
+    margin: 10px;
+    padding: 13px 55px;
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
+    text-align: center;
+}
+input:focus::placeholder{
+    color: transparent;
+}
+input:focus{
+    outline: none !important;
+    border-color: 	#D0D0D0;
+  
+}
+
+.b_input {
+    border: none;
+    border-bottom: 1px solid #F0F0F0 ;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.i_input{
+    border: none;
+    border-bottom: 1px solid #F0F0F0 ;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+
+/* button css */
+.button{
+    
+    font-family: 'lato';
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 18px;
+    color: white;
+    width:150px;
+    padding: 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition:0.25s color,0.25s border, 0.25s background; 
+    
+}
+#income_btn{
+    background-color:#282c35 ;
+    border:1px solid #282c35;
+}
+#income_btn:hover{
+    background-color: #84778b;
+}
+#expense_btn{
+    background-color: #282c35;
+    border: 1px solid #282c35;
+}
+#expense_btn:hover{
+    background-color: #84778b;
+}
+/*  dropdown css*/
+.dropdown
+{
+    width: 173px;
+    border: 1px solid #c9a0dc;
+    height: 43px;
+    /* text-align: center; */
+    border-radius: 7px;
+    padding: 0px 10px;
+} 
+
+
+
+ /*   month wise expense */
+ #monthwise_expense{
+     padding:61px 0px;
+     float: left;
+     width: 50%;
+ }
+ #m_expense{
+     width: 50%;
+     border: none;
+     margin: 10px 0px;
+ }
+ #monthwise_btn{
+     background-color: #3B3C36;
+     margin: 0px 10px;
+     padding: 10px;
+ }
+ #monthly_expense{
+     float: left;
+ }
+ .monthe_input{
+     clear: both;
+     visibility: hidden;
+ }
+
+/* table css*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    visibility: hidden;
+  }
+  
+  td, th {
+    text-align: left;
+    padding: 8px;
+  }
+
+
+
+/*  edit modal css*/
+
+.edit_modal{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+}
+
+.editmodal_content
+{
+    background-color:#F0F0F0;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+}
+.edit_modal label{
+    margin-top: 14px;
+}
+.edit_inputs{
+    margin-top: 25%;
+    text-transform: capitalize;
+}
+#edit_btn{
+    background-color: #3B3C36;
+}
+.edit_inputs input{
+    margin: 10px;
+    padding: 9px 55px;
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
+    text-align: center;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+#success_msg{
+    visibility: hidden;
+    width: 400px;
+    height: 80px;
+}
+#danger_msg{
+    visibility: hidden;
+    width: 400px;
+    height: 80px;
+}
+ .alert {
+     position: absolute !important;
+    left: 52% !important;
+    top: 116% !important;
+ }
+

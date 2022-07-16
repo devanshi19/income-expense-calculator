@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="./css/home_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+</head>
+<body>
+
+    <!--    header area -->
+
+    <div class="main-header ">
+        <div class="container clearfix">
+            <div class="logo ">
+                <h1>Monefy</h1>
+            </div>
+            <div class="nav ">
+                <ul>
+                    <li><a href="" title="about us">about us</a></li>
+                    <li><a href="" title="contact us">contact us</a></li>
+                    <li><a href="index.html" title="logout" id="logout">logout</a></li>
+                    <li><a href=""><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- banner area  -->
+    <div class="banner">
+        <div class="container clearfix">
+            <h2>Wel come to monefy</h2>
+        </div>
+    </div>
+    <!--  danger alert -->
+    <div id="danger_msg">
+        <!-- <div id="danger" class="alert alert-danger">
+            Your expense is higher than your total income.
+            <p></p>
+        </div> -->
+        <div id="danger"  class="alert alert-danger alert-dismissible">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                     Your expense is higher than your total income.
+                                </div>
+    </div>
+
+    <!--   main section -->
+    <div class="main-section">
+        <div class="container clearfix">
+
+            <!--   income section -->
+            <div class="income">
+                <h3>enter your income below</h3>
+                <input placeholder="income" class="inputs" name="income" id="income" type="number">
+                <button type="button" role="button" id="income_btn" class="button" onclick="income_addition()">Add</button>
+            </div>
+
+
+
+            <!---total balance display area -->
+
+            <div class="balance" id="balance">
+                <h3>total balance</h3>
+                <label for="income">Total Income</label>
+                <input class="i_input" name="total_income" id="total_income" type="text">
+                <label for="income">Total Expense</label>
+                <input class="i_input" name="total_expense" id="total_expense" type="text">
+                <label for="balance">Total Balance</label>
+                <input class="b_input" name="balance" id="t_balance" type="text">
+
+            </div>
+
+            <!--   expense section -->
+
+            <div class="expense">
+                <div class="expense_input">
+                    <h4>enter your expense</h4>
+                    <input placeholder="Enter your expense" class="inputs" name="expense" id="expense" type="number">
+                </div>
+                <div class="note_input">
+                    <h4>enter note</h4>
+                    <input placeholder="Note" class="inputs" name="note" id="note" type="text">
+                </div>
+
+
+                <!-- category dropdown -->
+                <div class="categories">
+                    <select name="category" class="dropdown" id="category">
+                        <option value="food">Food</option>
+                        <option value="cloths">cloths</option>
+                        <option value="Medical">Medical</option>
+                        <option value="House-hold">House-hold
+                        </option>
+                        <option value="Bills">Bills</option>
+                                    <option value="Sports">Sports</option>
+                                    <option value="Cars">Cars</option>
+                                    <option value="Travel">Travel</option>
+                                    <option value="Dinner/Outings">Dinner/Outings</option>
+                                    <option value="Gifts">Gifts</option>
+                                    <option value="Childcare">Childcare</option>
+                    </select>
+                </div>
+
+                <!--  month -->
+                <div class="months">
+                    <select name="month" class="dropdown" id="month">
+                        <option selected>Janaury</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                </div>
+
+
+
+
+                <!-- edit modal area -->
+                <div class="edit_modal" id="edit-modal">
+                    <div class="editmodal_content">
+                        <span class="close">&times;</span>
+                        <div class="edit_inputs">
+                            <label for="edit-category">choose the  month of which expense you want to change
+                            </label><br>
+                            <div class="edited_months">
+                                <select name="month" class="dropdown" id="edit_month">
+                                    <option selected>Janaury</option>
+                                    <option>February</option>
+                                    <option>March</option>
+                                    <option>April</option>
+                                    <option>May</option>
+                                    <option>June</option>
+                                    <option>July</option>
+                                    <option>August</option>
+                                    <option>September</option>
+                                    <option>October</option>
+                                    <option>November</option>
+                                    <option>December</option>
+                                </select>
+                            </div>
+                            <label for="edit-expense">Enter your edited expense</label><br>
+                            <input class="inputs" name="expense" id="edit_expense" type="number"><br>
+                            <label for="edit-category">choose your edited category
+                            </label><br>
+                            <div class="edited_categories">
+                                <select name="category" class="dropdown" id="edit_category">
+                                    <option value="food">Food</option>
+                                    <option value="cloths">cloths</option>
+                                    <option value="Medical">Medical</option>
+                                    <option value="House-hold">House-hold
+                                    </option>
+                                    <option value="Bills">Bills</option>
+                                    <option value="Sports">Sports</option>
+                                    <option value="Cars">Cars</option>
+                                    <option value="Travel">Travel</option>
+                                    <option value="Dinner/Outings">Dinner/Outings</option>
+                                    <option value="Gifts">Gifts</option>
+                                    <option value="Childcare">Childcare</option>
+                                </select>
+                            </div><br>
+                            <button type="button" id="edit_btn" class="button" onclick="edit_data()">save</button>
+                            <div id="success_msg">
+                                <div class="alert alert-success alert-dismissible">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                    <strong>Success!</strong> Your data has been updated sucsessfully.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="expense_addbtn">
+                    <button type="button" id="expense_btn" class="button" onclick="expense_addition()">Add</button>
+                </div>
+                
+                <!--  edit section -->
+                <div class="edit_value">
+                    <a id="edit-link"><i class="fa fa-edit" style="font-size:24px"></i></i></a>
+                </div>
+            </div>
+
+            <!--   month wise expense -->
+            <div id="monthwise_expense" class="monthwise_expense">
+                <div class="container clearfix">
+                    <h3>Check your monthly expense </h3>
+                    <select name="month" class="dropdown" id="monthly_expense">
+                        <option selected>Janaury</option>
+                        <option>February</option>
+                        <option>March</option>
+                        <option>April</option>
+                        <option>May</option>
+                        <option>June</option>
+                        <option>July</option>
+                        <option>August</option>
+                        <option>September</option>
+                        <option>October</option>
+                        <option>November</option>
+                        <option>December</option>
+                    </select>
+                    <div class="expensecheck_btn">
+                        <button type="button" id="monthwise_btn" class="button"
+                            onclick="monthly_expense()">check</button>
+                    </div>
+                    <div class="monthe_input" id="monthe_input">
+                        <input class="b_input" name="month_expense" id="m_expense" type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!--    table section -->
+    <div class="table_area">
+        <div class="container clearfix">
+            <table id="expense_data">
+                <tr>
+                    <th>Category</th>
+                    <th>Expense</th>
+                    <th>Note</th>
+                    <th>Month</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- js  -->
+    <script src="home_scrpit.js"></script>
+</body>
+
+</html>

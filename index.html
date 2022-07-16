@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income-Expense app</title>
+    <link rel="stylesheet"  type="text/css" href="../income-expense demo/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--    header area -->
+    <div class="main-header ">
+        <div class="container clearfix">
+            <div class="logo ">
+                <h1>Monefy</h1>
+            </div>
+            <div class="nav ">
+                <ul>
+                    <li><a href="index.html" title="shop all rugs">Home</a></li>
+                    <li><a title="samples" id="login">Login</a></li>
+                    <li><a title="blog" id="signup">Signup</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--   login-modal area -->
+    <div id="login-Modal" class="login-modal">
+        <div class="login-content">
+            <span class="close">&times;</span>
+            <div class="inputs">
+                <input type="email" placeholder="abc@email.com" name="email" id="login_uemail" onchange="loginemail_validation()"><br>
+                <div id="loginemail_validation" title="please enetr valid email" class="text-danger" ></div>
+                <input type="password" placeholder="password" name="password" id="login_pwd"><br>
+                <div class="new_account">
+                    <h4>don't have an account?</h4>
+                    <a onclick="hide_show()" href="#">sign up</a>
+                </div>
+                <input type="submit" role="button" class="button" value="LOGIN" onclick="logIn()">
+            </div>
+            <div id="invalid_user">
+            <div class="alert" id="login_invalid">
+                <p>forgot password? or you don't have account.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!--   signup-modal area -->
+    <div id="signup-Modal" class="signup-modal">
+        <div class="signup-content">
+            <span class="signup-close">&times;</span>
+            <div class="signup-inputs">
+                <input type="text" placeholder="Username" name="username" id="signup_uname" onchange=" username_validation()"><br>
+                <div id="validate_username" title="please enetr valid username" class="text-danger" > </div>
+
+                <input type="email" placeholder="abc@email.com" name="email" id="signup_email" onchange="email_validation()"><br>
+                <div id="validate_email" title="please enetr valid email" class="text-danger" > </div>
+
+                <input type="password" placeholder="password" name="password" id="signup_pwd" onchange="pwd_validation()"><br>
+                <div id="validate_password" title="please enetr valid password" class="text-danger" > </div>
+                <input type="submit"  role="button" class="button" id="signup-btn" value="SIGNUP" onclick="signUp()">
+                <div id="invalid_signup">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--   main section area  -->
+    <div class="main-section">
+        <div class="container clearfix">
+            <div class="content">
+                <h1>what is Monefy</h1>
+                <h4>Money  is a handy personal finance management website.</h4>
+                <p>How do you manage your budget and watch every ruppee? With Monefy, your financial organizer and finance tracker, it’s simple. Each time you buy a coffee, pay a bill, or make a daily purchase, you only need to add each expense you have — that's it! Just add new records each time you make a purchase. It’s done in one click, so you don’t need to fill anything except the amount. Tracking daily purchases, bills, and everything else you spend money on has never been so quick and enjoyable with this money manager.</p>
+                <p> Saving money in today's world is not easy. You need a budget. Luckily, Monefy is more than a money tracker, it's also one of the best savings apps to help you with money management. Keep track of your personal expenses and compare them to your monthly income with the budget planner. Keep your monthly budget in mint condition. Your new budgeting app will help you become a budgeting master and start saving money with Monefy.</p>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="index.js"></script>
+</body>
+
+</html>

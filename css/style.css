@@ -1,0 +1,245 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'lato';
+    font-size: 16px;
+    color: #4f5c5c;
+    line-height: 30px;
+    font-weight: 400;
+    background-color: black;
+    /* background-image: url("/images/bg-img3.jpg"); */
+    background-size:cover;
+    z-index: -1;
+    
+}
+h1,h2,h3,h4,h5,h6{
+    line-height: 1.2;
+}
+.container{
+    margin: 0px auto;
+    max-width:1200px;
+}
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+
+/*   header section */
+
+.logo{
+    width: 25%;
+    float: left;
+    padding: 20px 0px;
+ }
+.logo h1{
+   padding-top: 10px;    
+   color:		#B0B0B0 ;
+}
+ .nav{
+   width: 75%;
+   float:left;
+ }
+ .nav ul{
+    list-style: none;
+    float: right;
+    padding: 42px 0px;
+ }
+ .nav ul li{
+    float:left;
+    padding: 0px 0px 0px 18px;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+}
+.nav ul li a:hover{
+    border-bottom: 1px solid white;
+}
+.nav ul li i{
+    color: white;
+}
+
+
+/* modal css */
+.login-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+}
+
+
+  /* login model */
+.login-content{
+    
+    background-color:#F0F0F0;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+}
+.inputs
+{
+    margin-top: 25%;
+}
+.inputs input{
+    margin: 10px;
+    padding: 20px 55px;
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.button{
+    
+    font-family: 'lato';
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 18px;
+    width:150px;
+    color: white;
+    
+    background-color:#282c35;
+    border:1px solid #707c7c;
+   
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    transition:0.25s color,0.25s border, 0.25s background; 
+    
+}
+.button:hover{
+    background-color:	#B8B8B8;
+    color: #282c35;
+    font-weight: 500;
+}
+
+.inputs input:focus::placeholder{
+    color: transparent;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.new_account h4{
+    text-transform: capitalize;
+    display: inline;
+    
+}
+.new_account a{
+    color: 	#707070;
+}
+
+
+
+  /* signup css*/
+  .signup-modal{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+  }
+.signup-content{
+    background-color:#F0F0F0;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+}
+.signup-close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.signup-close:hover,
+.signup-close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.signup-inputs{
+    margin-top: 25%;
+}
+.signup-inputs input{
+    margin: 10px;
+    padding: 20px 55px;
+    border: 1px solid #F0F0F0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+/* main section css*/
+.content{
+    width:75%;
+    float:left;
+    padding:173px 0px;
+}
+.button-area{
+    width:25%;
+    float: left;
+}
+.content h1{
+    text-transform: capitalize;
+    color:#707c7c ;
+    line-height: 66px;
+}
+.content h4{
+    text-transform: uppercase;
+    color: #a795b1;
+}
+.content p{
+    display: block;
+    text-align: justify;
+    color: #B8B8B8;
+}
+
+
+/* login validitty css */
+#invalid_user{
+    visibility: hidden;
+}
+
+
+.alert{
+    color: red;
+}
